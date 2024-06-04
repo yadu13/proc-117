@@ -1,6 +1,5 @@
 # import the necessary modules
 from flask import Flask , render_template , request , jsonify
-
 # importing sentiment_analysis file as sa
 import sentiment_analysis as sa
 
@@ -12,12 +11,12 @@ def home():
     return render_template('index.html')
 
 # write a route for post request
-@app.route('/predict_sentiment' , methods = ['POST'])
+@app.route('/predict-sentiment' , methods = ['POST'])
 def predict_sentiment():
 
     # extract the customer_review by writing the appropriate 'key' from the JSON data
     review = request.json.get("text")
-
+ 
     # check if the customer_review is empty, return error
     if not review:
 
