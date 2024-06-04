@@ -1,10 +1,10 @@
 import pandas as pd
 import numpy as np
 
-import tensorflow.keras as tf
-from tensorflow.keras.preprocessing.text import Tokenizer
-from tensorflow.keras.preprocessing.sequence import pad_sequences
-from tensorflow.keras.models import load_model
+import tensorflow as tf
+from keras.preprocessing.text import Tokenizer
+from keras.preprocessing.sequence import pad_sequences
+from keras.models import load_model
 
 train_data = pd.read_csv("./static/assets/dataset/updated_product_dataset.csv")    
 training_sentences = []
